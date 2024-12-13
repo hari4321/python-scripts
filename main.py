@@ -1,18 +1,45 @@
-"""
-This program prints a diamond shaped pattern in the console
-"""
+def print_cstep_pattern():
+    """Prints the word 'CSTEP' in a pattern form using a block style."""
+    C = [
+        " CCC ",
+        "C    ",
+        "C    ",
+        "C    ",
+        " CCC "
+    ]
+    S = [
+        " SSSS ",
+        "S     ",
+        " SSS  ",
+        "    S ",
+        " SSSS "
+    ]
+    T = [
+        "TTTTTTT",
+        "   T   ",
+        "   T   ",
+        "   T   ",
+        "   T   "
+    ]
+    E = [
+        "EEEEE ",
+        "E     ",
+        "EEE   ",
+        "E     ",
+        "EEEEE "
+    ]
+    P = [
+        "PPPP  ",
+        "P   P ",
+        "PPPP  ",
+        "P     ",
+        "P     "
+    ]
 
-def print_diamond_pattern(n):
-    """Prints a diamond pattern with n rows."""
-    # Top half of the diamond
-    for i in range(1, n + 1):
-        print(" " * (n - i) + "*" * (2 * i - 1))
-    
-    # Bottom half of the diamond
-    for i in range(n - 1, 0, -1):
-        print(" " * (n - i) + "*" * (2 * i - 1))
+    # Print the word "CSTEP" in the pattern
+    for i in range(5):
+        print(C[i] + " " + S[i] + " " + T[i] + " " + E[i] + " " + P[i])
 
 # Example usage
 if __name__ == "__main__":
-    rows = 5  # Number of rows for the diamond
-    print_diamond_pattern(rows)
+    print_cstep_pattern()
